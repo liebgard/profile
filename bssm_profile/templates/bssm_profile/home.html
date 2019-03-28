@@ -1,0 +1,15 @@
+{% extends "bssm_profile/base.html" %}
+{% block content %}
+    {% for projekt in projekte%}
+      <project class="media border p-3">
+          <div class="media-body">
+            <div class="project-metadata">
+              <h6 class="mr-2">for {{ projekt.client }} in {{ projekt.location }}</h6>
+              <small class="text-muted projekt-period">von {{ projekt.period_from|date:"F d, Y" }} bis {{ projekt.period_to|date:"F d, Y" }}</small>
+            </div>
+            <h2><a class="project-title" href="#">{{ projekt.title }}</a></h2>
+            <p class="project-content">{{ projekt.task }}</p>
+          </div>
+       </project>        
+    {% endfor %}
+{% endblock content %}

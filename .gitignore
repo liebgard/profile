@@ -1,0 +1,4 @@
+.*project
+__*
+db.sqlite3
+temp.*
